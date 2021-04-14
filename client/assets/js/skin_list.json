@@ -1,0 +1,104 @@
+{
+    "skin_1": {
+		"skin_id": 		"1",
+        "skin_name":	"doge",
+        "skin_url":		"./skins/doge.png",
+        "skin_price":	"0"
+    },
+    "skin_2": {
+        "skin_id":      "2",
+        "skin_name":    "wendy-axe",
+        "skin_url":     "./skins/wendy-axe.png",
+        "skin_price":   "2000"
+    },
+    "skin_3": {
+        "skin_id":      "3",
+        "skin_name":    "carp",
+        "skin_url":     "./skins/carp.png",
+        "skin_price":   "2000"
+    },
+    "skin_4": {
+        "skin_id":      "4",
+        "skin_name":    "cat-cauldron",
+        "skin_url":     "./skins/cat-cauldron.png",
+        "skin_price":   "2000"
+    },
+    "skin_5": {
+        "skin_id":      "5",
+        "skin_name":    "cool-agent",
+        "skin_url":     "./skins/cool-agent.png",
+        "skin_price":   "2000"
+    },
+	"skin_6": {
+		"skin_id": 		"6",
+        "skin_name":	"super-hero",
+        "skin_url":		"./skins/super-hero.png",
+        "skin_price":	"2000"
+    },
+    "skin_7": {
+        "skin_id":      "7",
+        "skin_name":    "pumpkitty",
+        "skin_url":     "./skins/pumpkitty.png",
+        "skin_price":   "2000"
+    },
+    "skin_8": {
+        "skin_id":      "8",
+        "skin_name":    "angry-sandwich",
+        "skin_url":     "./skins/angry-sandwich.png",
+        "skin_price":   "4000"
+    },
+    "skin_9": {
+        "skin_id":      "9",
+        "skin_name":    "borggy",
+        "skin_url":     "./skins/borggy.png",
+        "skin_price":   "4000"
+    },
+    "skin_10": {
+        "skin_id":      "10",
+        "skin_name":    "creepy-cracker",
+        "skin_url":     "./skins/creepy-cracker.png",
+        "skin_price":   "6000"
+    },
+    "skin_11": {
+        "skin_id":      "11",
+        "skin_name":    "frenzy",
+        "skin_url":     "./skins/frenzy.png",
+        "skin_price":   "6000"
+    },
+    "skin_12": {
+        "skin_id":      "12",
+        "skin_name":    "gobbler",
+        "skin_url":     "./skins/gobbler.png",
+        "skin_price":   "6000"
+    },
+    "skin_13": {
+        "skin_id":      "13",
+        "skin_name":    "hot-watermelon",
+        "skin_url":     "./skins/hot-watermelon.png",
+        "skin_price":   "8000"
+    },
+    "skin_14": {
+        "skin_id":      "14",
+        "skin_name":    "poppyns",
+        "skin_url":     "./skins/poppyns.png",
+        "skin_price":   "8000"
+    },
+    "skin_15": {
+        "skin_id":      "15",
+        "skin_name":    "skelly",
+        "skin_url":     "./skins/skelly.png",
+        "skin_price":   "10000"
+    },
+    "skin_16": {
+        "skin_id":      "16",
+        "skin_name":    "clover",
+        "skin_url":     "./skins/clover.png",
+        "skin_price":   "50000"
+    },
+    "skin_17": {
+        "skin_id":      "17",
+        "skin_name":    "alex",
+        "skin_url":     "./skins/alex.png",
+        "skin_price":   "50000"
+    }
+ }

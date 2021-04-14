@@ -1,0 +1,1383 @@
+@font-face {
+  font-family: 'SplitexFont';
+  src: url('../assets/css/splitexfont.woff2') format('woff2'), /* Super Modern Browsers */
+}
+
+body {
+  font-family: 'SplitexFont', Fallback, sans-serif;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+body #helloDialog {
+  background-color: white;
+}
+input[type=checkbox] {
+    cursor: pointer;
+}
+
+.connected-message {
+  zoom: 1.5;
+  margin-top: 52px;
+}
+
+.modal.fade .modal-dialog {
+  -webkit-transition: -webkit-transform .3s ease-out;
+       -o-transition:      -o-transform .3s ease-out;
+          transition:         transform .3s ease-out;
+  -webkit-transform: translate(0, 100%) rotate(180deg) !important;
+      -ms-transform: translate(0, 100%) rotate(180deg) !important;
+       -o-transform: translate(0, 100%) rotate(180deg) !important;
+          transform: translate(0, 100%) rotate(180deg) !important;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 50%) rotate(360deg) scale(1.2, 1.2) !important;
+      -ms-transform: translate(0, 50%)  rotate(360deg) scale(1.2, 1.2) !important;
+       -o-transform: translate(0, 50%)  rotate(360deg) scale(1.2, 1.2) !important;
+          transform: translate(0, 50%)  rotate(360deg) scale(1.2, 1.2) !important;
+}
+
+.connected-message {
+  zoom: 2;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    margin-right: -100px;
+}
+
+.hud {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    color: #fff;
+
+    z-index: 100;
+
+}
+
+.adminpanel {
+    display: block;
+    position: absolute;
+    top: 300px;
+    right: 50px;
+    width: 250px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .3);
+    padding: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 1px 1px 5px #3e3c3c;
+}
+
+.adminpanel-title {
+
+    color: #fff;
+
+    font-size: x-large;
+
+    font-weight: bold;
+
+}
+
+.adminpanel-tool {
+
+    margin-top: 5px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    text-align: left;
+
+}
+
+.discord[data-v-661435cd] {
+    cursor: pointer;
+    display: block;
+    color: #e1e1e1;
+    padding: 10px;
+    background: #273b5e;
+    border: 1px solid #000;
+    border-radius: 8px;
+    margin-top: 150px;
+    width: 305px;
+    height: 130px;
+    font-size: 22px;
+}
+
+.discord[data-v-661435cd]:hover {
+  background-color: #726a95;
+}
+
+.tablinks {
+  background-color: inherit;
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tablinks:hover {
+  background-color: #ddd;
+}
+
+.tablinks.active {
+  background-color: #ccc;
+}
+
+.tablinks2 {
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tablinks2:hover {
+}
+
+.tablinks2:after {
+
+}
+
+.tab-login-button {
+    margin-left: -90px;
+    width: 500px;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+}
+
+.tab-settings-button {
+    margin-left: 70px;
+}
+
+#overlays, #connecting {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+}
+#connecting {
+    z-index: 100;
+}
+#connecting-content {
+    width: 350px;
+    background-color: #fff;
+    margin: 100px auto;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+#title {
+    padding: 10px;
+    margin-left: -100px;
+}
+#nick {
+    width: 55%;
+    margin-left: 30px;
+}
+#skin {
+    width: 33%;
+    float: right;
+}
+#nick, #skin {
+    display: inline;
+}
+#gamemode {
+    margin-top: 5px;
+    width: 100%;
+}
+#helloDialog {
+  font-family: 'SplitexFont', Fallback, sans-serif;
+    width: 400px;
+    background-color: #fff;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+}
+#LoginPanel {
+  font-family: 'SplitexFont', Fallback, sans-serif;
+    width: 350px;
+    background-color: #fff;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    position: absolute;
+    top: 50%;
+    left: -47%;
+    transform: translate(-50%, -50%);
+    min-height: 600px;
+    height: auto;
+}
+#ServersPanel {
+  font-family: 'SplitexFont', Fallback, sans-serif;
+    width: 350px;
+    background-color: #fff;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    position: absolute;
+    top: 50%;
+    left: 147%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    min-height: 600px;
+}
+#SocialPanel {
+  font-family: 'SplitexFont', Fallback, sans-serif;
+    width: 400px;
+    background-color: #fff;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80px;
+}
+#AdsPanel {
+  font-family: 'SplitexFont', Fallback, sans-serif;
+    width: 1130px;
+    background-color: #fff;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    position: absolute;
+    top: -44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 130px;
+}
+#Fueatured-videoPanel {
+  font-family: 'SplitexFont', Fallback, sans-serif;
+    width: 400px;
+    background-color: #fff;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    position: absolute;
+    top: 135%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 280px;
+}
+#InfosPanel {
+  font-family: 'SplitexFont', Fallback, sans-serif;
+    width: 350px;
+    background-color: #fff;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    position: absolute;
+    top: 138%;
+    left: 147%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    min-height: 80px;
+}
+#SubmitPanel {
+  font-family: 'SplitexFont', Fallback, sans-serif;
+  width: 350px;
+    background-color: #fff;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    position: absolute;
+    top: 138%;
+    left: -47%;
+    transform: translate(-50%, -50%);
+    min-height: 80px;
+    height: auto;
+}
+#adsPanelleft {
+  font-family: 'SplitexFont', Fallback, sans-serif;
+    width: 350px;
+    background-color: #fff;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    position: absolute;
+    top: 50%;
+    left: -137.7%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+}
+#adsPanelright {
+  font-family: 'SplitexFont', Fallback, sans-serif;
+  width: 350px;
+    background-color: #fff;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+    position: absolute;
+    top: 50%;
+    left: 237.7%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+}
+#chat_textbox {
+    transition: all .5s ease-in-out;
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    background: rgba(0, 0, 0, .2);
+    border: 0px;
+    outline: none;
+    color: #fff;
+    height: 30px;
+    text-indent: 12px;
+    left: 10px;
+    width: 300px;
+    font-family: "SplitexFont";
+}
+#chat_textbox:focus {
+    background: rgba(0, 0, 0, .5);
+}
+#footer {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+#play-btn {
+    width: 50px;
+    background-color: #d1eaa3;
+border: 1px solid #d1eaa3;
+  padding: 6px 10px;
+  height: 31px;
+  font-weight: bold;
+  color: white;
+}
+#play-btn:hover {
+background-color: #38ad38;
+  border: 1px solid #1d801d;
+}
+#spectate-btn {
+    width: 150px;
+    background-color: #f69e7b;
+  border: 1px solid #f69e7b;
+    text-shadow: 1px 1px 2px #183d94;
+    padding: 6px 10px;
+    height: 40px;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+    margin-left: 28px;
+}
+#spectate-btn:hover {
+  background-color: #e8781c;
+    border: 1px solid #b15810;
+}
+#settings-btn {
+    background-color: #a6dcef;
+    border: 1px solid #a6dcef;
+    text-shadow: 1px 1px 2px #171717;
+    width: 150px;
+    height: 40px;
+    margin-right: -30px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    line-height: 0px;
+}
+#settings-btn:hover {
+  background-color: #2196f3;
+  border: 1px solid #2196f3;
+}
+#touchpad, #touchCircle, #splitBtn, #ejectBtn {
+    position: fixed;
+}
+#touchpad, #splitBtn, #ejectBtn {
+    z-index: 2;
+}
+#touchpad {
+    background: #000;
+    opacity: 0.3;
+    width: 20vw;
+    height: 20vh;
+    left: 0;
+    bottom: 0;
+}
+#touchCircle {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 2vw;
+    background: #f00;
+    opacity: 0.3;
+    z-index: 3;
+}
+#splitBtn, #ejectBtn {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 4vw;
+    background: #777;
+    opacity: 0.5;
+}
+#splitBtn {
+    right: 18vw;
+    bottom: 0;
+}
+#ejectBtn {
+    bottom: 18vw;
+    right: 0;
+}
+#playSounds:checked + #soundsVolume {
+    display: inline;
+}
+#soundsVolume {
+    display: none;
+    width: 100px;
+    height: 18px;
+    padding: 0; /* IE fix */
+    vertical-align: middle;
+}
+#settings label {
+    margin-right: 10px;
+    user-select: none;
+    vertical-align: baseline;
+}
+.checkbox label, .radio label {
+    min-height: 20px;
+    padding-left: 50px;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+    width: 80px;
+}
+.checkbox, .radio {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: -20px;
+}
+table.controls {
+    color: #e60c0c;
+    font-size: 14px;
+    width: 50%;
+    /* height: 0%; */
+    float: left;
+    margin-top: 10px;
+    margin-left: -0px;
+    border-right: 1px solid orange;
+}
+
+.controls h4 {
+    font-size: 20px;
+    margin: 0;
+    padding: 10px;
+    color: black;
+}
+
+tr.keychange {
+    color: orange;
+    border-bottom: 1px solid white;
+    height: 25px;
+}
+
+tr.controlseparator {
+}
+
+tr.controlrow {
+    height: 22px;
+    color: black;
+}
+.hotkey {
+    background-color: rgb(115 112 112 / 25%);
+    width: 50px;
+    border: none;
+    margin: 0 10px;
+    text-align: center;
+    color: black;
+    font-family: Luckiest Guy;
+    transition: .3s;
+    /* border: 1px inset black; */
+}
+.hotkey:hover {
+    background-color: rgba(0, 0, 0, 0.65);
+    color: orange;
+    border-radius: 20px;
+}
+tr.keychange td:nth-child(2) {
+    text-align: center;
+}
+.controls td + td {
+    text-align: center;
+}
+.keybox {
+    width: 200px;
+    height: 40px;
+    display: inline-block;
+    background-color: #e2e2e2;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #c1c1c1;
+    cursor: pointer;
+    user-select: none;
+    color: #000000;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: -2px;
+}
+#server-button {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  width: 325px;
+    margin-left: -20px;
+}
+
+#server-button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.container {
+    padding: 1px;
+    background-color: white;
+    width: 280px;
+    margin-top: 100px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.loginbtn {
+  background-color: #a7c5eb;
+  border: 1px solid #a7c5eb;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.loginbtn:hover {
+  background-color: #949cdf;
+  opacity: 1;
+}
+
+a {
+  color: dodgerblue;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.container2 {
+    padding: 1px;
+    background-color: white;
+    width: 280px;
+    margin-top: 100px;
+    margin-left: 19px;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 0 35px 0 35px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #cac8c8;
+    border-radius: 20px;
+    height: 50px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.registerbtn {
+  background-color: #9cf196;
+  border: 1px solid #9cf196;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  background-color: #75DB4B;
+  opacity: 1;
+}
+
+a {
+  color: dodgerblue;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.SaveColorButton {
+  background-color: #00ff44;
+  height: 30px;
+  width: 150px;
+  border: 0px solid #00ff44;
+}
+
+.orange > span {
+  background-image: linear-gradient(#f1a165, #f36d0a);
+}
+
+.meter {
+  box-sizing: content-box;
+  height: 20px; /* Can be anything */
+  position: relative;
+  margin: 60px 0 20px 0; /* Just for demo spacing */
+  background: #555;
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+  margin-top: -10px;
+  width: 260px;
+}
+.meter > span {
+  display: block;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: rgb(43, 194, 83);
+  background-image: linear-gradient(
+    center bottom,
+    rgb(43, 194, 83) 37%,
+    rgb(84, 240, 84) 69%
+  );
+  box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+.meter > span:after,
+.animate > span > span {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+  z-index: 1;
+  background-size: 50px 50px;
+  animation: move 2s linear infinite;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  overflow: hidden;
+}
+
+.animate > span:after {
+  display: none;
+}
+
+.profile-infos img {
+  margin-top: 10px;
+    width: 320px;
+    height: 180px;
+}
+
+.profile-img img {
+  margin-top: 10px;
+    width: 320px;
+    height: 180px;
+}
+
+.shopbutton {
+    background-color: #FFD00E;
+    margin: 10px;
+    width: 280px;
+    height: 40px;
+    border: 1px solid #cbce33;
+    padding: 6px 10px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px #171717;
+    border-radius: 5px;
+}
+
+.shopbutton:hover {
+  background-color: #c4b121;
+}
+
+.friendsbutton {
+  background-color: lightgreen;
+  border: solid 1px black;
+  margin: 10px;
+  width: 280px;
+  height: 40px;
+}
+
+.profilesettingsbutton {
+  background-color: #8a734d;
+  border: solid 1px black;
+  margin: 10px;
+  width: 280px;
+  height: 40px;}
+
+.logoutbutton {
+  background-color: red;
+  border: solid 1px black;
+  margin: 10px;
+  width: 280px;
+  height: 40px;
+}
+
+#SocialPanel a {
+background-image: url('../img/discord.png');
+width:82px;
+height:80px
+}
+
+.featuredvideo {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.featured {
+    margin-top: 7px;
+    margin-bottom: 0px;
+    text-shadow: 1px 1px 5px white;
+    color: black;
+    font-size: 25px;
+}
+
+.ytvideoframe {
+    margin-top: 10px;
+    width: 320px;
+    height: 180px;
+    border: 2px solid;
+}
+
+.submit-skins {
+    background-color: #a3ddcb;
+    margin: 10px;
+    width: 280px;
+    height: 45px;
+    border: 1px solid #bee5d3;
+    padding: 6px 10px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px #171717;
+    border-radius: 5px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.submit-skins:hover {
+  background-color: #ccf6c8;
+}
+
+.select-skins {
+    background-color: #a7c5eb;
+    margin: 10px;
+    width: 130px;
+    height: 45px;
+    border: 1px solid #a7c5eb;
+    padding: 6px 10px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px #171717;
+    border-radius: 5px;
+    margin-left: 20px;
+    font-size: 12px;
+}
+.select-skins:hover {
+  background-color: #ccf6c8;
+}
+
+.error-message {
+  zoom: 2;
+}
+
+.terms {
+margin-top: 25px;
+}
+
+.btn-align {
+    margin-left: 25px;
+}
+
+.newpackframe {
+    margin-top: 10px;
+    width: 320px;
+    height: 100px;
+    border: 2px solid;
+}
+
+.light-theme {
+    background-color: #eedad1;
+    margin: 10px;
+    width: 100px;
+    height: 36px;
+    border: 1px solid #eedad1;
+    padding: 6px 10px;
+    color: black;
+    border-radius: 5px;
+    margin-top: -5px;
+}
+.light-theme:hover {
+  background-color: #dcd6f7;
+  color: black;
+}
+.dark-theme {
+    background-color: #383e56;
+    margin: 10px;
+    width: 100px;
+    height: 36px;
+    border: 1px solid #383e56;
+    padding: 6px 10px;
+    color: white;
+    border-radius: 5px;
+    margin-top: -5px;
+}
+.dark-theme:hover {
+  background-color: black;
+  color: white;
+}
+
+* {box-sizing: border-box}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: rgb(108 117 125 / 41%);
+    width: 398px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    float: center;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 95%;
+  border-left: none;
+  color: black;
+  height: 300px;
+}
+.modal-body {
+    position: relative;
+    padding: 0px;
+    left: -60px;
+    width: 499px;
+    height: 299px;
+}
+#Skins {
+    overflow: auto;
+}
+#Skins li {
+    position: relative;
+    width: 122px;
+    height: 180px;
+    margin: 4px;
+    border-radius: 10px;
+    background: rgba(0,0,0,.3);
+    padding: 7px;
+    float: left;
+    display: block;
+    left: -15px;
+}
+#Skins li>img {
+    border-radius: 50%;
+    margin-bottom: 8px;
+    width: 108px;
+    height: 108px;
+}
+#Skins li button, #Skins li input {
+    position: absolute;
+    bottom: 10px;
+    width: 100px;
+    margin: auto;
+    left: 5px;
+    right: 5px;
+}
+#Skins::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+#Skins::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+#Skins::-webkit-scrollbar-thumb
+{
+  background-color: #F90; 
+  background-image: -webkit-linear-gradient(45deg,
+                                            rgba(255, 255, 255, .2) 25%,
+                        transparent 25%,
+                        transparent 50%,
+                        rgba(255, 255, 255, .2) 50%,
+                        rgba(255, 255, 255, .2) 75%,
+                        transparent 75%,
+                        transparent)
+}
+#premium-skins {
+    overflow: auto;
+}
+#premium-skins li {
+    position: relative;
+    width: 122px;
+    height: 180px;
+    margin: 4px;
+    border-radius: 10px;
+    background: rgba(0,0,0,.3);
+    padding: 7px;
+    float: left;
+    display: block;
+    left: -15px;
+}
+#premium-skins li>img {
+    border-radius: 50%;
+    margin-bottom: 8px;
+    width: 108px;
+    height: 108px;
+}
+#premium-skins li button, #premium-skins li input {
+    position: absolute;
+    bottom: 10px;
+    width: 100px;
+    margin: auto;
+    left: 5px;
+    right: 5px;
+}
+#premium-skins::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+#premium-skins::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+#premium-skins::-webkit-scrollbar-thumb
+{
+  background-color: #F90; 
+  background-image: -webkit-linear-gradient(45deg,
+                                            rgba(255, 255, 255, .2) 25%,
+                        transparent 25%,
+                        transparent 50%,
+                        rgba(255, 255, 255, .2) 50%,
+                        rgba(255, 255, 255, .2) 75%,
+                        transparent 75%,
+                        transparent)
+}
+#Coins {
+    overflow: auto;
+}
+#Coins li {
+    position: relative;
+    width: 122px;
+    height: 190px;
+    margin: 4px;
+    border-radius: 10px;
+    background: rgba(0,0,0,.3);
+    padding: 7px;
+    float: left;
+    display: block;
+    left: 25px;
+}
+#Coins li>img {
+    border-radius: 50%;
+    margin-bottom: 8px;
+    width: 108px;
+    height: 108px;
+}
+#Coins li button, #Coins li input {
+    position: absolute;
+    bottom: 10px;
+    width: 100px;
+    margin: auto;
+    left: 5px;
+    right: 5px;
+}
+#Coins::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+#Coins::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+#Coins::-webkit-scrollbar-thumb
+{
+  background-color: #F90; 
+  background-image: -webkit-linear-gradient(45deg,
+                                            rgba(255, 255, 255, .2) 25%,
+                        transparent 25%,
+                        transparent 50%,
+                        rgba(255, 255, 255, .2) 50%,
+                        rgba(255, 255, 255, .2) 75%,
+                        transparent 75%,
+                        transparent)
+}
+.tab2 {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab2 button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab2 button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab2 button.active {
+  background-color: #ccc;
+}
+
+#Skins > .body main nav.Skins {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+#Skins > .body main nav.Skins > button {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: .5rem 0rem;
+    font-size: 16px;
+    font-weight: 600;
+    color: lightgray;
+    background-color: rgba(0, 0, 0, 0.075);
+    border: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    -webkit-transition: border-color .3s ease, color .3s ease;
+    transition: border-color .3s ease, color .3s ease;
+}
+#Skins > .body main nav.Skins > button.active {
+    color: white;
+    border-color: #1f57fd;
+}
+#premium-skins > .body main nav.Skins {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+#premium-skins > .body main nav.Skins > button {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: .5rem 0rem;
+    font-size: 16px;
+    font-weight: 600;
+    color: lightgray;
+    background-color: rgba(0, 0, 0, 0.075);
+    border: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    -webkit-transition: border-color .3s ease, color .3s ease;
+    transition: border-color .3s ease, color .3s ease;
+}
+#premium-skins > .body main nav.Skins > button.active {
+    color: white;
+    border-color: #1f57fd;
+}
+span.collapsearrow.bestvalue {
+    font-size: 14px;
+    float: right;
+    /* margin-top: 5px; */
+    background-color: green;
+    padding: 5px;
+    border-radius: 10px;
+}
+.bestvalue {
+    font-size: 14px;
+    width: 100px;
+    background-color: #1f57fd;
+    padding: 1px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 10px;
+    float: left;
+    margin-left: 4px;
+    position: absolute;
+    margin-top: -150px;
+}
+.navigation-btn {
+  margin-left: 150px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    width: 199px;
+    margin-left: -12px;
+    margin-top: 30px;
+    table-layout: fixed;
+    position: static;
+}
+
+.blueb {
+    background: linear-gradient(to bottom, #194d77, #1687e0);
+    border: 2px solid #194d77;
+}
+
+.deadblock {
+    text-align: center;
+    width: 330px;
+    height: auto;
+    background-color: #fff;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 15px 15px 15px 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.green2 {
+    width: 100%;
+    height: 50px;
+    margin: 10px auto 0;
+    background: blue;
+}
+.push_button {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: #FFF;
+    outline: none!important;
+    margin: 0 auto;
+    text-shadow: -1px 1px 0 rgb(0 0 0 / 50%);
+    transition: all 0.25s ease;
+    border: 0px solid rgb(0 0 0 / 5%);
+    box-shadow: 0 1px 2px 0px rgb(0 0 0 / 10%) inset;
+    border-radius: 8px;
+}
+.tab-login-btn {
+    width: 100px;
+    background-color: #a7c5eb;
+    border: 1px solid #a7c5eb;
+    padding: 6px 10px;
+    height: 50px;
+    font-weight: bold;
+    color: white;
+}
+.tab-login-btn:hover {
+  background-color: #949cdf;
+}
+
+.tab-register-btn {
+    width: 100px;
+    background-color: #9cf196;
+    border: 1px solid #9cf196;
+    padding: 6px 10px;
+    height: 50px;
+    font-weight: bold;
+    color: white;
+}
+.tab-register-btn:hover {
+  background-color: #75DB4B;
+}
+
+.tab-btn-splitex {
+    width: 174px;
+}
+
+.test-border {
+  background: #0000ff;
+  background-color: #0000ff;
+  color: #0000ff;
+}
+
+.news-button {
+    width: 320px;
+    background-color: #f69e7b;
+    border: 1px solid #f69e7b;
+    text-shadow: 1px 1px 2px #183d94;
+    padding: 6px 10px;
+    height: 99px;
+    font-weight: bold;
+    color: white;
+    margin-top: -100px;
+    font-size: 50px;
+}
+
+
+.btn-theme {
+  margin-top: 150px;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.Loading
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100vh
+  width: 100vw
+  background-color: black
+
+.Loading-progress
+  height: 5px
+  width: 250px
+  border-radius: 3px
+  background: linear-gradient(90deg, red 0%, yellow 15%, lime 30%, cyan 50%, blue 65%, magenta 80%, red 100%)
+  background-size: 200%
+  animation: moveGradient 5s linear infinite
+
+@keyframes moveGradient
+  0%
+    background-position: 0% 0%
+  100%
+    background-position: -200% 0%
+  
