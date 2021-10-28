@@ -2,6 +2,6 @@
 
 I open source my old game here
 
-Please use my credit: Yellow
+Please use my credit: Elyabel
 
-If you need help contact me in discord: Yellow#8008
+If you need help contact me in discord: Elyabel#2874
